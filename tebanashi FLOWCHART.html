@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>手放しの旅 — マインドマップ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #F5F0E8;
+  font-family: 'Noto Serif JP', serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 64px;
+}
+header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 300;
+  color: #3D3530;
+  letter-spacing: 0.08em;
+}
+h1 em {
+  font-style: italic;
+  color: #8B6F4A;
+}
+.subtitle {
+  font-size: 13px;
+  color: #9A8E82;
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+}
+.mindmap-wrap {
+  width: 100%;
+  max-width: 900px;
+}
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.node-group {
+  cursor: pointer;
+}
+.node-group rect {
+  transition: filter 0.2s ease;
+}
+.node-group:hover rect {
+  filter: brightness(0.92);
+}
+.comment-panel {
+  max-width: 900px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 30px 40px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border-left: 3px solid #B8922A;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.comment-panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.comment-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #9A8E82;
+  margin-bottom: 12px;
+}
+.comment-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #3D3530;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+.comment-body {
+  font-size: 15px;
+  line-height: 2.1;
+  color: #5A4E44;
+}
+footer {
+  margin-top: 56px;
+  font-size: 12px;
+  color: #B8A898;
+  text-align: center;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+footer span {
+  color: #8B6F4A;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>手放しの旅 &ensp;<em>The Letting Go Journey</em></h1>
+  <p class="subtitle">エハン・デラヴィ &amp; 愛知ソニア &ensp;／&ensp; Miracle Shift Academy</p>
+</header>
+
+<div class="mindmap-wrap">
+<svg viewBox="0 0 900 680" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Connecting lines: center (450,340) to each node center -->
+  <line x1="450" y1="340" x2="650" y2="340" stroke="#C8BAA8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="450" y1="340" x2="550" y2="513" stroke="#C8BAA8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="450" y1="340" x2="350" y2="513" stroke="#C8BAA8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="450" y1="340" x2="250" y2="340" stroke="#C8BAA8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="450" y1="340" x2="350" y2="167" stroke="#C8BAA8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="450" y1="340" x2="550" y2="167" stroke="#C8BAA8" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- Center node -->
+  <circle cx="450" cy="340" r="66" fill="#F5F0E8" stroke="#B8922A" stroke-width="1.5"/>
+  <circle cx="450" cy="340" r="58" fill="#F5F0E8" stroke="#B8922A" stroke-width="0.5" stroke-dasharray="3 4"/>
+  <text x="450" y="330" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="17" font-weight="500" fill="#3D3530">手放し</text>
+  <text x="450" y="350" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="14" font-style="italic" fill="#8B6F4A">の旅</text>
+  <text x="450" y="368" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" fill="#B8A898">Letting Go</text>
+
+  <!-- Node 1: 手放した後の世界 — right (0°), center (650,340) -->
+  <g class="node-group" onclick="showComment(0)">
+    <rect x="572" y="308" width="156" height="64" rx="10" fill="#E8F4EE" stroke="#5A9B8A" stroke-width="1"/>
+    <text x="650" y="332" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" font-weight="500" fill="#2D6B5A">手放した後の世界</text>
+    <text x="650" y="353" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#3D8B72">平和・明晰さ・上昇</text>
+  </g>
+
+  <!-- Node 2: 意識のマップ — bottom-right (60°), center (550,513) -->
+  <g class="node-group" onclick="showComment(1)">
+    <rect x="472" y="481" width="156" height="64" rx="10" fill="#EEF2F8" stroke="#4A7A9B" stroke-width="1"/>
+    <text x="550" y="505" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" font-weight="500" fill="#1F5070">意識のマップ</text>
+    <text x="550" y="526" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#2A6A8F">ホーキンス博士</text>
+  </g>
+
+  <!-- Node 3: ACIMの赦し — bottom-left (120°), center (350,513) -->
+  <g class="node-group" onclick="showComment(2)">
+    <rect x="272" y="481" width="156" height="64" rx="10" fill="#F0EEF8" stroke="#7B6FAD" stroke-width="1"/>
+    <text x="350" y="505" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" font-weight="500" fill="#4A3D8F">ACIMの赦し</text>
+    <text x="350" y="526" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#5A4DAF">選び直し・奇跡</text>
+  </g>
+
+  <!-- Node 4: ホーキンスの手法 — left (180°), center (250,340) -->
+  <g class="node-group" onclick="showComment(3)">
+    <rect x="172" y="308" width="156" height="64" rx="10" fill="#FBF4E6" stroke="#B8922A" stroke-width="1"/>
+    <text x="250" y="332" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" font-weight="500" fill="#7A5A10">ホーキンスの手法</text>
+    <text x="250" y="353" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#9A7020">エネルギーを歓迎</text>
+  </g>
+
+  <!-- Node 5: ただ、許可する — top-left (240°), center (350,167) -->
+  <g class="node-group" onclick="showComment(4)">
+    <rect x="272" y="135" width="156" height="64" rx="10" fill="#E8F4EE" stroke="#5A9B8A" stroke-width="1"/>
+    <text x="350" y="159" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" font-weight="500" fill="#2D6B5A">ただ、許可する</text>
+    <text x="350" y="180" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#3D8B72">抑圧も表現もしない</text>
+  </g>
+
+  <!-- Node 6: 感情が湧き上がる — top-right (300°), center (550,167) -->
+  <g class="node-group" onclick="showComment(5)">
+    <rect x="472" y="135" width="156" height="64" rx="10" fill="#FAF0EC" stroke="#C4785A" stroke-width="1"/>
+    <text x="550" y="159" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" font-weight="500" fill="#8B3D20">感情が湧き上がる</text>
+    <text x="550" y="180" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#A84E2A">手放しの入口</text>
+  </g>
+
+  <!-- Hint -->
+  <text x="450" y="644" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="12" fill="#C8BAA8">各テーマをクリックして内容を表示</text>
+
+</svg>
+</div>
+
+<!-- Comment panel -->
+<div class="comment-panel" id="commentPanel">
+  <div class="comment-label" id="commentLabel"></div>
+  <div class="comment-title" id="commentTitle"></div>
+  <div class="comment-body" id="commentBody"></div>
+</div>
+
+<footer>
+  <p>Miracle Shift Academy &ensp;／&ensp; <span>エハン・デラヴィ &amp; 愛知ソニア</span></p>
+  <p>H2 Japan Co., Ltd. &ensp;三田市・兵庫県</p>
+</footer>
+
+<script>
+var comments = [
+  {
+    label: "手放した後の世界",
+    title: "平和・明晰さ・意識の上昇",
+    body: "手放しが起きたとき、最初に訪れるのは「静けさ」です。頭の中でぐるぐるしていた物語が急に止まり、身体の緊張が緩む。平和は得るものではなく、すでにそこにあるもの——感情と信念が積み重なってそれを覆い隠していただけです。ACIMの言葉で言えば、手放しは「平和を作る」のではなく、「覆いを取り除く」プロセス。明晰さが戻ると、ずっと悩んでいたことの答えが突然やってきます。そして一人の意識の上昇は、家族、コミュニティ、社会へと波紋のように広がっていく——これがエハンさんとソニアさんが何十年も伝え続けてきた確信です。",
+    color: "#5A9B8A"
+  },
+  {
+    label: "ホーキンス博士の意識のマップ",
+    title: "1〜1000のスケールで意識を測る",
+    body: "ホーキンス博士の意識のマップは、人間の感情・意識状態を数値で表したものです。200（勇気）が最初の大きな転換点——これより下の感情（恐れ・怒り・罪悪感・恥）はエネルギーを収縮させ、200より上（勇気・受け入れ・愛・平和）は拡張します。500は愛、600は平和、700以上は悟りの領域。手放しのプロセスは、このスケールを徐々に上昇していく旅です。重要なのは、低いレベルの感情を「悪いもの」と見なさないこと——それは次のレベルへの扉だからです。エハンさんとソニアさんの共訳「手放しのすすめ」は、この地図を日本に届けた仕事です。",
+    color: "#4A7A9B"
+  },
+  {
+    label: "奇跡のコース（ACIM）",
+    title: "赦しと選び直し——奇跡の始まり",
+    body: "ACIMでは、湧き上がった感情は「知覚のエラーのシグナル」として見ます。怒りや恐れは「私は攻撃されている」「私は分離している」という誤った信念から生まれます。「これは私に何を見せようとしているのか？」と聖霊に問いかけ、感情を悪者にしない。ただ「これが今、私の中にある」と認める——その認めること自体が赦しの入口であり、奇跡の始まりです。ミラクルシフトアカデミーで長年伝えられてきたこのメッセージは、「古い世界を手放す」コースの中心にあります。手放し（ホーキンス）と赦し（ACIM）は車の両輪——どちらも同じ平和へと向かっています。",
+    color: "#7B6FAD"
+  },
+  {
+    label: "ホーキンス博士の手法",
+    title: "感情のエネルギーを歓迎する",
+    body: "感情の「物語」から離れ、身体の感覚に降りることが最初のステップです。「なぜ怒っているか」という思考ではなく、「胸がざわざわしている」「喉が締まっている」という純粋な感覚に意識を向ける。エネルギーは動きたがっています——波のように来て、ピークに達し、自然に退いていく。「歓迎する」とは、そのエネルギーに「来てもいいよ」と扉を開けること。抑圧すると身体と無意識に閉じ込められ、歓迎すると解放されます。これは「感情に飲まれる」ことではありません——ただ観察者として、感覚の波を見守ること。これがエハンさんの手放しワークショップの核心的な実践です。",
+    color: "#B8922A"
+  },
+  {
+    label: "手放しの核心的実践",
+    title: "ただ、許可する——第三の道",
+    body: "感情が現れたとき、多くの人は「消したい」か「爆発させたい」かのどちらかに動きます。しかしホーキンス博士の手放しの手法は第三の道を示します——抑圧も表現もせず、ただ「ある」と認める。これは受け身ではなく、非常に積極的な内なる行為です。ACIMも同じことを別の言葉で言っています：感情にノーと言わず、それを通して真実へと向かう。エハンさんとソニアさんの手放し勉強会では、この「許可する」という実践が中心に置かれています。参加者がこの瞬間を体験するとき、部屋の空気が変わる——それが実際に起きていることです。",
+    color: "#5A9B8A"
+  },
+  {
+    label: "手放しの入口",
+    title: "感情が湧き上がる——チャンスの瞬間",
+    body: "感情が現れた瞬間こそ、手放しのチャンスです。恐れ、怒り、悲しみ、抵抗——これらは問題ではなく、より高い意識レベルへ移行するための扉です。最初にすべきことは「何もしない」こと。逃げない、押さえない、爆発させない。ただ「あ、何かが起きている」と気づく。この気づき自体が、すでに手放しの始まりです。ホーキンス博士は「感情はエネルギーの場だ」と言います——それは悪いものではなく、より高いレベルへ移行するためのエネルギー。エハンさんが三田のご自宅でのワークショップで繰り返し伝えるのは、この「気づき」の力です。",
+    color: "#C4785A"
+  }
+];
+
+var panel = document.getElementById('commentPanel');
+var labelEl = document.getElementById('commentLabel');
+var titleEl = document.getElementById('commentTitle');
+var bodyEl = document.getElementById('commentBody');
+
+function showComment(index) {
+  var c = comments[index];
+  labelEl.textContent = c.label;
+  titleEl.textContent = c.title;
+  bodyEl.textContent = c.body;
+  panel.style.borderLeftColor = c.color;
+  panel.classList.add('visible');
+}
+</script>
+
+</body>
+</html>
